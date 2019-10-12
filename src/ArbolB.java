@@ -3,8 +3,8 @@ public class ArbolB {
     public ArbolB(){
         root = null;
     }
-    public void add(int i, String w){
-        Nodo n = new Nodo(i);
+    public void add(int i, int w){
+        Nodo n = new Nodo(i,w);
         n.word = w;
         if(root == null){
             root = n;
@@ -26,6 +26,12 @@ public class ArbolB {
                     n.padre.right = n;
                 }
             }
+        }
+    }
+    public void find(String palabra){
+        Nodo aux = root;
+        while(aux.key != 1){
+
         }
     }
 }

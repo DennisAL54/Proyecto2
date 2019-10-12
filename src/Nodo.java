@@ -3,13 +3,13 @@ public class Nodo {
     public Nodo left;
     public Nodo right;
     public int key;
-    public String word;
+    public int word;
 
-    public Nodo(int index){
+    public Nodo(int index, int w){
         key = index;
         left = null;
         right = null;
+        word = w;
         padre = null;
-        word = null;
     }
 }
