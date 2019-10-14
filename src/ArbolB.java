@@ -28,10 +28,21 @@ public class ArbolB {
             }
         }
     }
-    public void find(String palabra){
+    public Nodo find(int p){
         Nodo aux = root;
-        while(aux.key != 1){
-
+        while(aux.key != p){
+            if(p<aux.word){
+                aux = aux.left;
+            }
+            else{
+                aux = aux.right;
+            }
+            if(aux==null){
+                return null;
+            }
         }
+
+        return aux;
+
     }
 }
