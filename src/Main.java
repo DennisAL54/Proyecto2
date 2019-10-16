@@ -17,16 +17,22 @@ public class Main extends Application{
     }
 
     public static void main(String[] args) {
+
         FileReader r= new FileReader();
         ArbolB tree = new ArbolB();                             //inicio de prueba de parseo
         String word = JOptionPane.showInputDialog("insertar palabra");
         char[] cArray = word.toCharArray();
         char character = cArray[0];
         int ascii = (int)character;
+<<<<<<< HEAD
         tree.add(ascii, word);                                  //fin de prueba de parseo
         r.ReadFile("C:\\Users\\Dell\\Desktop\\Test.txt");
         r.ReadFile("C:\\Users\\Dell\\Desktop\\Test1.txt");
         r.ReadFile("C:\\Users\\Dell\\Desktop\\Test2.txt");
+=======
+
+        tree.add(ascii, word);//fin de prueba de parseo
+>>>>>>> master
         launch(args);
     }
 
