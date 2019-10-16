@@ -1,37 +1,38 @@
 public class ArbolB {
     Nodo root;
-    public ArbolB(){
+
+    public ArbolB() {
         root = null;
     }
-    public void add(int i, int w){
-        Nodo n = new Nodo(i,w);
-        n.word = w;
-        if(root == null){
+
+    public void add(int i, String w) {
+        Nodo n = new Nodo(i, w);
+        if (root == null) {
             root = n;
-        }
-        else{
+        } else {
             Nodo aux = root;
-            while(aux!=null){
+            while (aux != null) {
                 n.padre = aux;
-                if(n.key >= aux.key){
-                    aux = aux.right;
-                }
-                else{
+                if (i < aux.key) {
                     aux = aux.left;
-                }
-                if(n.key<=n.padre.key){
-                    n.padre.left = n;
-                }
-                else{
-                    n.padre.right = n;
+                    if (aux == null) {
+                        n.padre.left = n;
+                        return;
+                    }
+                } else {
+                    aux = aux.right;
+                    if(aux == null){
+                        n.padre.right = n;
+                        return;
+                    }
                 }
             }
         }
     }
-    public Nodo find(int p){
+    public Nodo Buscar(int d){
         Nodo aux = root;
-        while(aux.key != p){
-            if(p<aux.word){
+        while(aux.key!=d){
+            if(d<aux.key){
                 aux = aux.left;
             }
             else{
@@ -41,8 +42,12 @@ public class ArbolB {
                 return null;
             }
         }
-
         return aux;
-
     }
 }
+    /*String str = "dog";
+    char[] cArray = str.toCharArray();
+    char character = cArray[0];
+    char character2 = cArray[1];
+    int ascii = (int)character;
+    int ascii2 = (int)character2;*/

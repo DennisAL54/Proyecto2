@@ -3,9 +3,9 @@ public class Nodo {
     public Nodo left;
     public Nodo right;
     public int key;
-    public int word;
+    public String word;
 
-    public Nodo(int index, int w){
+    public Nodo(int index, String w){
         key = index;
         left = null;
         right = null;
