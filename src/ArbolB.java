@@ -44,7 +44,7 @@ public class ArbolB {
         }
         return aux;
     }
-}
+}   //Esto es un ejemplo de la conversion ascii usada para la busqueda binaria. No se implementa de esta forma
     /*String str = "dog";
     char[] cArray = str.toCharArray();
     char character = cArray[0];
