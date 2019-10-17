@@ -31,6 +31,7 @@ public class ArbolB {
             add(conversionSum(cArray), str);
             scan.next();
         }
+        return;
 
     }
 
