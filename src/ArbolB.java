@@ -1,8 +1,37 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class ArbolB {
     Nodo root;
 
     public ArbolB() {
         root = null;
+    }
+    public int conversionSum(char[] c){
+        int n;
+        int i;
+        int S;
+        S = (int)c[0];
+        i=1;
+        n = c.length;
+        while(i!=(n-1)){
+            char character = c[i];
+            int ascii = (int)character;
+            S = S + ascii;
+        }
+        return S;
+    }
+
+    public void scan(File f)throws FileNotFoundException {
+        Scanner scan = new Scanner(f);
+        while(scan.hasNextLine()){
+            String str = scan.toString();
+            char[] cArray = str.toCharArray();
+            add(conversionSum(cArray), str);
+            scan.next();
+        }
+
     }
 
     public void add(int i, String w) {

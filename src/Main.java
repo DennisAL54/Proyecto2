@@ -5,6 +5,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.stream.Stream;
 
 public class Main extends Application{
 
@@ -15,24 +22,18 @@ public class Main extends Application{
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
     }
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
+        ArbolB tree = new ArbolB();
+        File file = new File("C:\\Users\\aleji\\Desktop\\ALE\\Documentos TEC\\Semestre 6\\Datos\\Proyecto Text Finder\\Proyecto2\\Files");
+        File[] Arr = file.listFiles();
+        for(File f:Arr){
+            tree.scan(f);
+        }
 
         FileReader r= new FileReader();
-        ArbolB tree = new ArbolB();                             //inicio de prueba de parseo
-        String word = JOptionPane.showInputDialog("insertar palabra");
-        char[] cArray = word.toCharArray();
-        char character = cArray[0];
-        int ascii = (int)character;
-<<<<<<< HEAD
-        tree.add(ascii, word);                                  //fin de prueba de parseo
         r.ReadFile("C:\\Users\\Dell\\Desktop\\Test.txt");
         r.ReadFile("C:\\Users\\Dell\\Desktop\\Test1.txt");
         r.ReadFile("C:\\Users\\Dell\\Desktop\\Test2.txt");
-=======
-
-        tree.add(ascii, word);//fin de prueba de parseo
->>>>>>> master
         launch(args);
     }
 
