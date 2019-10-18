@@ -23,12 +23,13 @@ public class Main extends Application{
         primaryStage.show();
     }
     public static void main(String[] args) throws FileNotFoundException {
-        /*ArbolB tree = new ArbolB();
+        File[] Arr;
+        ArbolB tree = new ArbolB();
         File file = new File("C:\\Users\\aleji\\Desktop\\ALE\\Documentos TEC\\Semestre 6\\Datos\\Proyecto Text Finder\\Proyecto2\\Files");
-        File[] Arr = file.listFiles();
+        Arr = file.listFiles();
         for(File f:Arr){
             tree.scan(f);
-        }*/
+        }
 
         FileReader r= new FileReader();
         r.ReadFile("C:\\Users\\Dell\\Desktop\\Test.txt");

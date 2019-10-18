@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -8,6 +9,7 @@ public class ArbolB {
     public ArbolB() {
         root = null;
     }
+
     public int conversionSum(char[] c){
         int n;
         int i;
@@ -59,7 +61,12 @@ public class ArbolB {
             }
         }
     }
-    public Nodo Buscar(int d){
+    public Nodo Buscar(String word){
+        String w;
+        w = word;
+        char[] charac = word.toCharArray();
+        int d;
+        d = conversionSum(charac);
         Nodo aux = root;
         while(aux.key!=d){
             if(d<aux.key){
