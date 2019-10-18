@@ -64,7 +64,7 @@ public class ArbolB {
     public Nodo Buscar(String word){
         String w;
         w = word;
-        char[] charac = word.toCharArray();
+        char[] charac = w.toCharArray();
         int d;
         d = conversionSum(charac);
         Nodo aux = root;
