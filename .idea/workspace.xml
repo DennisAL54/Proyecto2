@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="400af27d-effe-4ef3-94dd-f37369410914" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto2/ArbolB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto2/ArbolB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto2/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto2/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto2/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto2/TextFinder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto2/TextFinder.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TextFinder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextFinder.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +84,8 @@
       <workItem from="1571251244271" duration="7292000" />
       <workItem from="1571335139114" duration="876000" />
       <workItem from="1571591334608" duration="2355000" />
-      <workItem from="1571606680756" duration="12664000" />
+      <workItem from="1571606680756" duration="12844000" />
+      <workItem from="1571683343564" duration="4731000" />
     </task>
     <servers />
   </component>
@@ -110,6 +106,15 @@
     </option>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Controller.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="Arr" />
