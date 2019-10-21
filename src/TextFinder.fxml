@@ -6,8 +6,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
-      <Button fx:id="btn1" layoutX="14.0" layoutY="344.0" mnemonicParsing="false" onAction="#Buscar" prefHeight="38.0" prefWidth="82.0" text="Buscar" />
+      <Button fx:id="btn1" layoutX="14.0" layoutY="344.0" mnemonicParsing="false" onAction="#Agregar" prefHeight="38.0" prefWidth="82.0" text="Agregar" />
       <ListView fx:id="listView" layoutX="335.0" layoutY="17.0" prefHeight="365.0" prefWidth="250.0" />
-      <Button fx:id="btn2" layoutX="244.0" layoutY="344.0" mnemonicParsing="false" onAction="#abrir" prefHeight="38.0" prefWidth="82.0" text="Abrir" />
+      <Button fx:id="btn2" layoutX="129.0" layoutY="344.0" mnemonicParsing="false" onAction="#abrir" prefHeight="38.0" prefWidth="82.0" text="Abrir" />
+      <Button fx:id="btn3" layoutX="236.0" layoutY="344.0" mnemonicParsing="false" onAction="#borrar" prefHeight="38.0" prefWidth="82.0" text="Borrar" />
    </children>
 </AnchorPane>

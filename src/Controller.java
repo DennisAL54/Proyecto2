@@ -1,11 +1,13 @@
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.stage.FileChooser;
 import javafx.scene.control.ListView;
 import javafx.scene.control.Button;
 import java.io.File;
-import java.util.Observable;
+import java.io.FileOutputStream;
+import java.nio.channels.FileChannel;
+import java.nio.file.Files;
+
 
 public class Controller {
     @FXML
@@ -14,17 +16,24 @@ public class Controller {
     private ListView listView;
     @FXML
     private Button btn2;
+    @FXML
+    private Button btn3;
 
 
-    public void Buscar(ActionEvent actionEvent) {
+    public void Agregar(ActionEvent actionEvent) {
         FileChooser filechooser = new FileChooser();
         File select = filechooser.showOpenDialog(null);
-        filechooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("PDF files","*.pdf"),
-                                                 new FileChooser.ExtensionFilter("Text files","*.txt"),
-                                                 new FileChooser.ExtensionFilter("DOC files","*.doc"));
+        File source =  (File) listView.getSelectionModel().getSelectedItem();
+        File dest = new File("C:\\Users\\Dell\\Documents\\NetBeansProjects\\Proyecto2\\Files");
+        FileChannel sourceChannel = null;
+        FileChannel destChannel = null;
 
         if(select != null){
-            listView.getItems().add(select.getAbsolutePath());
+            //listView.getItems().add(select.getAbsolutePath());
+            //sourceChannel = new FileInputStream(source).getChannel();
+            //destChannel = new FileOutputStream(dest).getChannel();
+            //destChannel.transferFrom(sourceChannel, 0, sourceChannel.size());
+
         }else{
             System.out.println("Error: Invalid File");
         }
@@ -34,7 +43,12 @@ public class Controller {
     public void abrir(){
         FileReader read = new FileReader();
         String path = (String) listView.getSelectionModel().getSelectedItem();
-        //System.out.println(path);
         read.ReadFile(path);
+        System.out.println(path);
+    }
+
+    public void borrar(){
+        int selected = listView.getSelectionModel().getSelectedIndex();
+        listView.getItems().remove(selected);
     }
 }
