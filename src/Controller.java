@@ -3,12 +3,8 @@ import javafx.fxml.FXML;
 import javafx.stage.FileChooser;
 import javafx.scene.control.ListView;
 import javafx.scene.control.Button;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.nio.channels.FileChannel;
-import java.nio.file.Files;
+import java.io.*;
+import java.text.SimpleDateFormat;
 
 
 public class Controller {
@@ -25,35 +21,50 @@ public class Controller {
     public void Agregar(ActionEvent actionEvent){
         FileChooser filechooser = new FileChooser();
         File select = filechooser.showOpenDialog(null);
-        //File source = (File) listView.getSelectionModel().getSelectedItem();
-        //File dest = new File("C:\\Users\\Dell\\Documents\\NetBeansProjects\\Proyecto2\\Files");
-        //FileChannel sourceChannel = null;
-        //FileChannel destChannel = null;
 
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+        File file = new File("C:\\Users\\Dell\\Documents\\NetBeansProjects\\Proyecto2\\Files\\al.txt");
+        File dest = new File("C:\\Users\\Dell\\Documents\\NetBeansProjects\\Proyecto2\\Files");
 
         if(select != null){
+
             listView.getItems().add(select.getAbsolutePath());
-            //try {
-              //  sourceChannel = new FileInputStream(source).getChannel();
-                //destChannel = new FileOutputStream(dest).getChannel();
-                //destChannel.transferFrom(sourceChannel, 0, sourceChannel.size());
-            //}finally{
-              //  sourceChannel.close();
-               // destChannel.close();
-            //}
-
-
+            System.out.println(sdf.format(file.lastModified()));
        }else{
             System.out.println("Error: Invalid File");
        }
 
     }
 
-    public void abrir(){
+    public void abrir() throws IOException {
+        String sour = listView.getSelectionModel().getSelectedItem().toString();
         FileReader read = new FileReader();
         String path = (String) listView.getSelectionModel().getSelectedItem();
         read.ReadFile(path);
-        System.out.println(path);
+
+        File source = new File(sour);
+        File dest = new File("C:\\Users\\Dell\\Documents\\NetBeansProjects\\Proyecto2\\Files\\dest.txt");
+        System.out.println(source);
+        System.out.println(dest);
+        copyFiles(source,dest);
+
+    }
+
+    private static void copyFiles(File source, File dest) throws IOException {
+        InputStream in = null;
+        OutputStream out = null;
+        try {
+            in = new FileInputStream(source);
+            out = new FileOutputStream(dest);
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = in.read(buffer)) > 0) {
+                out.write(buffer, 0, length);
+            }
+        } finally {
+            in.close();
+            out.close();
+        }
     }
 
     public void borrar(){
