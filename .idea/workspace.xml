@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="400af27d-effe-4ef3-94dd-f37369410914" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/docs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_io_2_6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Proyecto2/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto2/Controller.class" afterDir="false" />
@@ -27,11 +27,12 @@
   </component>
   <component name="ProjectId" id="1SAo4nqpRkA0EomBzT1qnsHpluM" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571373292415" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/commons-io-2.6" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/commons-io-2.6/commons-io-2.6.jar!/" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -89,7 +90,9 @@
       <workItem from="1571591334608" duration="2355000" />
       <workItem from="1571606680756" duration="12844000" />
       <workItem from="1571683343564" duration="4744000" />
-      <workItem from="1571763821024" duration="10825000" />
+      <workItem from="1571763821024" duration="11509000" />
+      <workItem from="1571860880887" duration="2833000" />
+      <workItem from="1571879527307" duration="1004000" />
     </task>
     <servers />
   </component>
