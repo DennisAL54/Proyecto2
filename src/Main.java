@@ -23,13 +23,13 @@ public class Main extends Application{
         primaryStage.show();
     }
     public static void main(String[] args) throws FileNotFoundException {
-       //File[] Arr;
-       //ArbolB tree = new ArbolB();
-       //File file = new File("");
-       //Arr = file.listFiles();
-       //for(File f:Arr){
-       //tree.scan(f);
-       //}
+       File[] Arr;
+       ArbolB tree = new ArbolB();
+       File file = new File("C:\\Users\\aleji\\Desktop\\ALE\\Documentos TEC\\Semestre 6\\Datos\\Proyecto Text Finder\\Proyecto2\\Files");
+       Arr = file.listFiles();
+       for(File f:Arr){
+       tree.scan(f);
+       }
 
         launch(args);
     }

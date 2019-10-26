@@ -24,21 +24,20 @@ public class ArbolB {
         }
         return S;
     }
-
     public void scan(File f)throws FileNotFoundException {
         Scanner scan = new Scanner(f);
         while(scan.hasNextLine()){
-            String str = scan.toString();
+            ListaOcurr listaO = new ListaOcurr();
+            String str = scan.next();
             char[] cArray = str.toCharArray();
-            add(conversionSum(cArray), str);
-            scan.next();
+            add(conversionSum(cArray), str, listaO);
         }
         return;
 
     }
 
-    public void add(int i, String w) {
-        Nodo n = new Nodo(i, w);
+    public void add(int i, String w, ListaOcurr l) {
+        Nodo n = new Nodo(i, w, l);
         if (root == null) {
             root = n;
         } else {
