@@ -21,6 +21,7 @@ public class ArbolB {
             char character = c[i];
             int ascii = (int)character;
             S = S + ascii;
+            i = i+1;
         }
         return S;
     }
@@ -30,7 +31,9 @@ public class ArbolB {
             ListaOcurr listaO = new ListaOcurr();
             String str = scan.next();
             char[] cArray = str.toCharArray();
-            add(conversionSum(cArray), str, listaO);
+            int ascii;
+            ascii = conversionSum(cArray);
+            add(ascii, str, listaO);
         }
         return;
 
