@@ -1,13 +1,28 @@
 import java.io.File;
 
+/***
+ * Clase para manejar la lista de ocurrencias (Lista simplemente enlazada)
+ */
 public class ListaOcurr {
     private NodoOcurr head;
+
+    /***
+     * Inicializa la la lista vacia
+     */
     public ListaOcurr(){
         head = null;
     }
     public boolean vacio(){
         return head == null;
     }
+
+    /***
+     * Metodo hecho para agregar elementos a la lista de ocurrencias
+     * @param lista
+     * @param A
+     * @param P
+     * @return
+     */
     public ListaOcurr add(ListaOcurr lista,File A, int P){
         NodoOcurr nuevo = new NodoOcurr(A,P);
         if(lista.head == null){

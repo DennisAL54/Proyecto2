@@ -94,7 +94,15 @@ public class Controller {
         int selected = listView.getSelectionModel().getSelectedIndex();
         listView.getItems().remove(selected);
     }
+
+    /***
+     * Metodo indexar, controlado por un boton en la interfaz grafica, es el encargado de generar el arbol basado en los documentos de la carpeta Files
+     * @throws FileNotFoundException
+     */
     public void indexar() throws FileNotFoundException {
+        /***
+         * Se crea un nuevo arbol, se obtiene la locacion de los archivos y se llama al metodo scan
+         */
         File[] Arr;
         ArbolB tree = new ArbolB();
         File file = new File("C:\\Users\\aleji\\Desktop\\ALE\\Documentos TEC\\Semestre 6\\Datos\\Proyecto Text Finder\\Proyecto2\\Files");
@@ -106,6 +114,10 @@ public class Controller {
         System.out.println("Indexado");
 
     }
+
+    /***
+     * LLama al metodo buscar mediante un boton, el JOptionPane controla la palabra que se ingresara
+     */
     public void buscar(){
         tree.Buscar(JOptionPane.showInputDialog("Ingresar palabra"));
 
