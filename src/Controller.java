@@ -38,7 +38,7 @@ public class Controller {
         if(select != null){
             listView.getItems().add(select.getAbsolutePath());
             File source = select.getAbsoluteFile();
-            File dest = new File("C:\\Users\\Dell\\Documents\\NetBeansProjects\\Proyecto2\\Files");
+            File dest = new File("Files");
             System.out.println(sdf.format(dest.lastModified()));
             System.out.println(source);
             System.out.println(dest);
@@ -61,7 +61,7 @@ public class Controller {
         Stage stage = (Stage) anchid.getScene().getWindow();
         File select = directoryChooser.showDialog(stage);
         File source = select.getAbsoluteFile();
-        File dest = new File("C:\\Users\\Dell\\Documents\\NetBeansProjects\\Proyecto2\\Files");
+        File dest = new File("Files");
 
         if(select != null){
             File[] listOfFiles = select.listFiles();
