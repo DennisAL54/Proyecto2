@@ -24,4 +24,24 @@ public class ListaOcurr {
     }
     //public ListaOcurr listaQ()
 
+    private void ordenFecha(String[] fechas){
+        String temp;
+        int n = fechas.length;
+        for (int j = 0; j < n - 1; j++){
+            for (int i = j + 1; i < n; i++){
+                if (fechas[j].compareTo(fechas[i]) > 0){
+                    temp = fechas[j];
+                    fechas[j] = fechas[i];
+                    fechas[i] = temp;
+                }
+            }
+        }
+    }
+
+    public void ordenTamano(int[] tamano){
+
+    }
+
 }
+
+

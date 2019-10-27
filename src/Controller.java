@@ -21,7 +21,7 @@ public class Controller {
     @FXML
     private Button btn3;
     @FXML
-    private Button btn5;
+    private Button btn4;
 
     public void archivo(){
         FileChooser filechooser = new FileChooser();
