@@ -17,17 +17,9 @@ public class Main extends Application{
         primaryStage.setTitle("Text Finder");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
-    }
-    public static void main(String[] args) throws FileNotFoundException {
-       File[] Arr;
-       ArbolB tree = new ArbolB();
-       File file = new File("C:\\Users\\aleji\\Desktop\\ALE\\Documentos TEC\\Semestre 6\\Datos\\Proyecto Text Finder\\Proyecto2\\Files");
-       Arr = file.listFiles();
-       for(File f:Arr){
-       tree.scan(f);
 
-       }
-       tree.Buscar(JOptionPane.showInputDialog("Ingresar palabra"));
+    }
+    public static void main(String[] args){
 
         launch(args);
     }

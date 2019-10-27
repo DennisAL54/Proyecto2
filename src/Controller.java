@@ -9,7 +9,10 @@ import java.text.SimpleDateFormat;
 import javafx.stage.Stage;
 import org.apache.commons.io.*;
 
+import javax.swing.*;
+
 public class Controller {
+    ArbolB tree = new ArbolB();
     @FXML
     private ListView listView;
     @FXML
@@ -22,6 +25,10 @@ public class Controller {
     private Button btn3;
     @FXML
     private Button btn4;
+    @FXML
+    private Button btn5;
+    @FXML
+    private Button btn6;
 
     public void archivo(){
         FileChooser filechooser = new FileChooser();
@@ -86,5 +93,21 @@ public class Controller {
     public void borrar(){
         int selected = listView.getSelectionModel().getSelectedIndex();
         listView.getItems().remove(selected);
+    }
+    public void indexar() throws FileNotFoundException {
+        File[] Arr;
+        ArbolB tree = new ArbolB();
+        File file = new File("C:\\Users\\aleji\\Desktop\\ALE\\Documentos TEC\\Semestre 6\\Datos\\Proyecto Text Finder\\Proyecto2\\Files");
+        Arr = file.listFiles();
+        for(File f:Arr){
+            tree.scan(f);
+
+        }
+        System.out.println("Indexado");
+
+    }
+    public void buscar(){
+        tree.Buscar(JOptionPane.showInputDialog("Ingresar palabra"));
+
     }
 }
