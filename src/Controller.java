@@ -105,7 +105,7 @@ public class Controller {
          */
         File[] Arr;
         ArbolB tree = new ArbolB();
-        File file = new File("C:\\Users\\aleji\\Desktop\\ALE\\Documentos TEC\\Semestre 6\\Datos\\Proyecto Text Finder\\Proyecto2\\Files");
+        File file = new File("Files");
         Arr = file.listFiles();
         for(File f:Arr){
             tree.scan(f);
