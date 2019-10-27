@@ -3,6 +3,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 
@@ -23,7 +25,9 @@ public class Main extends Application{
        Arr = file.listFiles();
        for(File f:Arr){
        tree.scan(f);
+
        }
+       tree.Buscar(JOptionPane.showInputDialog("Ingresar palabra"));
 
         launch(args);
     }
