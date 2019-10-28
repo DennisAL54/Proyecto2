@@ -102,6 +102,7 @@ public class Controller {
     public void indexar() throws FileNotFoundException {
         /***
          * Se crea un nuevo arbol, se obtiene la locacion de los archivos y se llama al metodo scan
+         * Notese que el programa pregunta si el arbol esta vacio antes de indexar
          */
         if(tree.root == null){
             File[] Arr;

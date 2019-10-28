@@ -127,10 +127,12 @@ public class ArbolB {
             else{
                 aux = aux.right;
             }
-            if(aux==null){
+            if(aux == null){
+                System.out.println("El elemento buscado no existe");
                 return null;
             }
         }
+        System.out.println("El elemento" + "_" + aux.word + "_" + "aparece");
         return aux;
     }
 }
