@@ -32,12 +32,12 @@ public class ArbolB {
         int i;
         int S;
         S = (int)c[0];
-        i=1;
+        i=0;
         n = c.length;
         /***
          * Bucle while que recorre la lista de caracteres
          */
-        while(i!=(n-1)){
+        while(i!=(n)){
             char character = c[i];
             int ascii = (int)character;
             S = S + ascii;
@@ -132,7 +132,7 @@ public class ArbolB {
                 return null;
             }
         }
-        System.out.println("El elemento" + "_" + aux.word + "_" + "aparece");
+        System.out.println("El elemento " + aux.word + " aparece");
         return aux;
     }
 }

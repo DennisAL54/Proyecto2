@@ -1,0 +1,1 @@
+La formula para la recta tangente se da mediante la multiplicacion del vector gradiente con otras cosas mas
