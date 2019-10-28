@@ -103,15 +103,19 @@ public class Controller {
         /***
          * Se crea un nuevo arbol, se obtiene la locacion de los archivos y se llama al metodo scan
          */
-        File[] Arr;
-        ArbolB tree = new ArbolB();
-        File file = new File("Files");
-        Arr = file.listFiles();
-        for(File f:Arr){
-            tree.scan(f);
+        if(tree.root == null){
+            File[] Arr;
+            File file = new File("Files");
+            Arr = file.listFiles();
+            for(File f:Arr){
+                tree.scan(f);
 
+            }
+            System.out.println("Indexado");
+
+        } else{
+            System.out.println("Documentos ya indexados");
         }
-        System.out.println("Indexado");
 
     }
 
