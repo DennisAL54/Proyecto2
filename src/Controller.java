@@ -8,10 +8,16 @@ import java.io.*;
 import java.text.SimpleDateFormat;
 import javafx.stage.Stage;
 import org.apache.commons.io.*;
-
 import javax.swing.*;
+/***
+ * Clase Controller, encargada de la comunicacion entre la interfaz y la logica
+ */
 
 public class Controller {
+
+    /***
+     * Variables de la clase Controller
+     */
     ArbolB tree = new ArbolB();
     @FXML
     private ListView listView;
@@ -30,22 +36,22 @@ public class Controller {
     @FXML
     private Button btn6;
 
+    /***
+     * Metodo archivo, hecho para agragar un unico archivo a la biblioteca
+     * @param
+     * @return
+     */
     public void archivo(){
         FileChooser filechooser = new FileChooser();
         File select = filechooser.showOpenDialog(null);
-        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
 
         if(select != null){
             listView.getItems().add(select.getAbsolutePath());
             File source = select.getAbsoluteFile();
             File dest = new File("Files");
-            System.out.println(sdf.format(dest.lastModified()));
-            System.out.println(source);
-            System.out.println(dest);
 
             try {
                 FileUtils.copyFileToDirectory(source, dest);
-                System.out.println(source.length());
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -56,6 +62,11 @@ public class Controller {
 
     }
 
+    /***
+     * Metodo carpeta, agrega los archivos de una carpeta a la bibliteca
+     * @param
+     * @return
+     */
     public void carpeta(){
         DirectoryChooser directoryChooser = new DirectoryChooser();
         Stage stage = (Stage) anchid.getScene().getWindow();
@@ -69,19 +80,24 @@ public class Controller {
             for (File file : listOfFiles) {
                 if (file.isFile()) {
                     listView.getItems().add(file.getAbsolutePath());
-                    System.out.println(file.getName());
                 }
             }
 
             try {
                 FileUtils.copyDirectoryToDirectory(source, dest);
-                System.out.println(source.length());
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            System.out.println("Error: Invalid File");
         }
 
     }
+
+    /***
+     * Metodo abrir, devuelve el texto del documento
+     * @param
+     * @return
+     */
 
     public void abrir(){
         FileReader read = new FileReader();
@@ -90,6 +106,11 @@ public class Controller {
     }
 
 
+    /***
+     * Metodo borrar, elimina el archivo selecionado de la biblioteca
+     * @param
+     * @return
+     */
     public void borrar(){
         int selected = listView.getSelectionModel().getSelectedIndex();
         listView.getItems().remove(selected);
@@ -125,6 +146,5 @@ public class Controller {
      */
     public void buscar(){
         tree.Buscar(JOptionPane.showInputDialog("Ingresar palabra"));
-
     }
 }

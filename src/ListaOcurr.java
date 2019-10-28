@@ -39,6 +39,11 @@ public class ListaOcurr {
     }
     //public ListaOcurr listaQ()
 
+    /***
+     * Metodo ordenFecha, acomoda las fechas en orden de menor a mayor usando bubbleSort
+     * @param fechas Lista con las fehcas de creacion de los archivos
+     * @return
+     */
     private void ordenFecha(String[] fechas){
         String temp;
         int n = fechas.length;
@@ -52,6 +57,12 @@ public class ListaOcurr {
             }
         }
     }
+
+    /***
+     * Metodo ordenTamano, ordena los archivos de acuerdo al tamano de los archivos
+     * @param tamano Lista que contiene los tamaños de cada archivo
+     * @return
+     */
 
     public void ordenTamano(int[] tamano){
 
